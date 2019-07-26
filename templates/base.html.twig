@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <meta charset="UTF-8">
+            <title>{% block title %}Welcome!{% endblock %}</title>
+            {% block stylesheets %}{{ encore_entry_link_tags('app') }}
+                <link rel="stylesheet" href="../assets/css/bootstrap.css">
+                <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            {% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+    <div id="content">
+        {{ include('inc/navbar.html.twig') }}
+        {% block content %}{% endblock %}
+    </div>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

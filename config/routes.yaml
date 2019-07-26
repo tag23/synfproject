@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_article_number:
+  path: /number
+  controller: App\Controller\RandomNumberController::number
